@@ -1,0 +1,35 @@
+syntax = 'proto3';
+
+package smartBuilding;
+
+service SmartBuildingService {
+    rpc date(SbRequest) returns(SbResponse) {}
+    rpc time(SbRequest) returns(SbResponse) {}
+    rpc securityFd(SbRequest) returns(SbResponse) {}
+    rpc securityF1(SbRequest) returns(SbResponse) {}
+    rpc securityF2(SbRequest) returns(SbResponse) {}
+    rpc tempF1(SbRequest) returns(SbResponse) {}
+    rpc tempF2(SbRequest) returns(SbResponse) {}
+    rpc tempFd(SbRequest) returns(SbResponse) {}
+    rpc idealT(SbRequest) returns(SbResponse) {}
+    rpc idealC(SbRequest) returns(SbResponse) {}
+    rpc lightFd(SbRequest) returns(SbResponse) {}
+    rpc lightF1(SbRequest) returns(SbResponse) {}
+    rpc lightF2(SbRequest) returns(SbResponse) {}
+    rpc displayFd(SbRequest) returns(SbResponse) {}
+    rpc displayF1(SbRequest) returns(SbResponse) {}
+    rpc displayF2(SbRequest) returns(SbResponse) {}
+    rpc test(SbRequest) returns(SbResponse) {}
+}
+
+message SbRequest {
+    uint32 newIdeal = 1;
+    uint32 number2 = 2;
+}
+
+message SbResponse {
+    string message = 1;
+    uint32 result = 2;
+    string message2 = 3;
+}
+
